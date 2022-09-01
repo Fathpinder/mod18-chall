@@ -47,6 +47,9 @@ const userController = {
         res.status(400).json(err);
       });
   },
+
+  // addFriend({})
+
   updateUser({ params, body }, res) {
     User.findOneAndUpdate({ _id: params.id }, body, {
       new: true,
@@ -72,6 +75,8 @@ const userController = {
       })
       .catch((err) => res.status(400).json(err));
   },
+
+  // removeFriend({})
 };
 
 module.exports = userController;
